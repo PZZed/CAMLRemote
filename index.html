@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astronomande</title>
+    <link  rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Astronomande</h1>
+            <div class="status"></div>
+        </header>
+
+        <main>
+            <div class="toggle-container">
+                <label for="toggle1">Suivi</label>
+                <label class="switch">
+                    <input type="checkbox" id="toggleSuivi" onchange="toogleSuivi(event)">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="toggle-container">
+                <label for="toggle2">Suivi STD</label>
+                <label class="switch">
+                    <input type="checkbox" id="toggleSuiviStd" onchange="toogleSuiviStd(event)">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="toggle-container">
+                <label for="toggle3">Retour</label>
+                <label class="switch">
+                    <input type="checkbox" id="toggle3" onchange="toogleRetour(event)">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="input-container">
+                <input type="number" id="speed" value="500">
+                <button onclick="updateSpeed()">Modifier vitesse</button>
+            </div>
+
+            <input type="range" id="speedRange" min="0" max="1000" value="500" oninput="syncSpeed()">
+        </main>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
